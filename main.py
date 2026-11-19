@@ -1,0 +1,487 @@
+"""
+SchemeMatch — Entrepreneur Scheme Matching Platform
+SIH26092: Unsupervised Beneficiary Clustering + Rule-Based Scheme Matching
+
+Interactive Streamlit Web Application.
+"""
+
+from typing import Any, Dict, List
+import os
+import joblib
+import pandas as pd
+import numpy as np
+import streamlit as st
+
+from matcher import (
+    CLUSTER_NAMES,
+    match_applicant,
+    find_funding_near_misses,
+    generate_cluster_scheme_mapping,
+)
+
+# Persona descriptions for user-friendly UI display
+CLUSTER_DESCRIPTIONS: Dict[int, str] = {
+    0: (
+        "Mid-career urban entrepreneurs operating service or retail ventures, "
+        "typically seeking working capital and operational credit lines."
+    ),
+    1: (
+        "Early-career rural micro-entrepreneurs (strong women representation) "
+        "launching new ventures in agri-allied, food processing, or artisanal units."
+    ),
+    2: (
+        "Experienced entrepreneurs managing established manufacturing enterprises "
+        "with substantial revenue and high capital expenditure requirements for machinery."
+    ),
+    3: (
+        "Established-age rural entrepreneurs spearheading new production units "
+        "or expanding existing manufacturing and processing facilities."
+    ),
+}
+
+# Archetype badge colors
+CLUSTER_BADGES: Dict[int, str] = {
+    0: "🔵",
+    1: "🟢",
+    2: "🟣",
+    3: "🟠",
+}
+
+# -----------------------------------------------------------------------------
+# Streamlit Page Config & Custom Styling
+# -----------------------------------------------------------------------------
+st.set_page_config(
+    page_title="SchemeMatch — Entrepreneur Scheme Matcher",
+    page_icon="🎯",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
+
+st.markdown(
+    """
+    <style>
+    .main-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #1E3A8A;
+        margin-bottom: 0.2rem;
+    }
+    .sub-title {
+        font-size: 1.05rem;
+        color: #4B5563;
+        margin-bottom: 1.2rem;
+    }
+    .disclaimer-box {
+        background-color: #FEF3C7;
+        border-left: 5px solid #F59E0B;
+        padding: 0.85rem 1.1rem;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+        font-size: 0.92rem;
+        color: #92400E;
+    }
+    .cluster-card {
+        background-color: #F0FDF4;
+        border: 1px solid #86EFAC;
+        padding: 1rem 1.25rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+    .cluster-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #166534;
+        margin-bottom: 0.3rem;
+    }
+    .cluster-desc {
+        color: #15803D;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    .metric-chip {
+        display: inline-block;
+        background: #E0E7FF;
+        color: #3730A3;
+        padding: 0.2rem 0.6rem;
+        border-radius: 12px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        margin-right: 0.4rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+# -----------------------------------------------------------------------------
+# Cached Resource & Data Loaders
+# -----------------------------------------------------------------------------
+@st.cache_resource(show_spinner="Loading machine learning pipelines...")
+def load_ml_models():
+    """Load the preprocessor pipeline and trained K-Means model."""
+    preprocessor_path = os.path.join("models", "preprocessor.joblib")
+    kmeans_path = os.path.join("models", "kmeans_model.joblib")
+    preprocessor = joblib.load(preprocessor_path)
+    kmeans = joblib.load(kmeans_path)
+    return preprocessor, kmeans
+
+
+@st.cache_data(show_spinner="Loading scheme and applicant databases...")
+def load_datasets():
+    """Load government schemes and synthetic applicant datasets."""
+    schemes_path = os.path.join("data", "schemes.csv")
+    applicants_path = os.path.join("data", "applicants.csv")
+    schemes_df = pd.read_csv(schemes_path)
+    applicants_df = pd.read_csv(applicants_path)
+    return schemes_df, applicants_df
+
+
+@st.cache_data(show_spinner="Computing cluster distribution table...")
+def get_cluster_mapping_summary():
+    """Generate and cache the Cluster-to-Scheme mapping table."""
+    return generate_cluster_scheme_mapping()
+
+
+# Load assets
+preprocessor, kmeans = load_ml_models()
+schemes_df, applicants_df = load_datasets()
+
+# -----------------------------------------------------------------------------
+# Header & Disclaimer
+# -----------------------------------------------------------------------------
+st.markdown('<div class="main-title">🎯 SchemeMatch</div>', unsafe_allow_html=True)
+st.markdown(
+    '<div class="sub-title">'
+    '<b>SIH26092</b>: Unsupervised Beneficiary Clustering + Rule-Based Scheme Matching Platform'
+    '</div>',
+    unsafe_allow_html=True,
+)
+
+st.markdown(
+    """
+    <div class="disclaimer-box">
+        ⚠️ <b>Advisory Disclaimer:</b> Results generated by SchemeMatch represent preliminary potential
+        matches determined by algorithmically evaluating published eligibility rules. They do <b>not</b>
+        constitute an official government sanction, approval, or guarantee of disbursement. Applicants must
+        verify all institutional conditions and apply through the respective official government portals.
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+# -----------------------------------------------------------------------------
+# Navigation Tabs
+# -----------------------------------------------------------------------------
+tab1, tab2 = st.tabs(["📋 Match My Profile", "📊 Cluster & Scheme Overview"])
+
+# =============================================================================
+# TAB 1: Match My Profile
+# =============================================================================
+with tab1:
+    st.subheader("Enter Entrepreneur & Venture Profile")
+    st.write(
+        "Fill in your profile details to predict your business persona cluster "
+        "and discover verified government credit and subsidy schemes tailored to your requirements."
+    )
+
+    with st.form("profile_form", clear_on_submit=False):
+        col1, col2, col3 = st.columns(3)
+
+        with col1:
+            age = st.number_input(
+                "Applicant Age (years)",
+                min_value=16,
+                max_value=75,
+                value=28,
+                step=1,
+                help="Government schemes typically require a minimum age of 18 years.",
+            )
+            annual_income = st.number_input(
+                "Annual Household Income (₹ INR)",
+                min_value=0,
+                value=250000,
+                step=10000,
+                help="Gross annual income in Indian Rupees.",
+            )
+            funding_requirement = st.number_input(
+                "Required Funding / Project Cost (₹ INR)",
+                min_value=0,
+                value=400000,
+                step=10000,
+                help="Total loan/grant requirement for your project.",
+            )
+
+        with col2:
+            sector = st.selectbox(
+                "Business / Project Sector",
+                options=[
+                    "Food Processing",
+                    "Manufacturing",
+                    "Service",
+                    "Trading",
+                    "Agri-Allied",
+                ],
+                index=1,
+                help="Primary sector in which the enterprise operates.",
+            )
+            business_stage = st.selectbox(
+                "Business Stage",
+                options=["New", "Existing", "Planning"],
+                index=0,
+                help="Select 'New' for greenfield setups, 'Existing' for running businesses, or 'Planning' for ideation.",
+            )
+            purpose = st.selectbox(
+                "Primary Purpose of Funding",
+                options=[
+                    "Machinery & Equipment",
+                    "Working Capital",
+                    "Unit Setup",
+                    "Business Expansion",
+                    "Raw Materials",
+                ],
+                index=2,
+                help="Main operational or capital expenditure intended.",
+            )
+
+        with col3:
+            location = st.selectbox(
+                "Enterprise Location",
+                options=["Rural", "Urban"],
+                index=0,
+                help="Rural setups frequently enjoy higher government subsidy slabs.",
+            )
+            social_category = st.selectbox(
+                "Social Category / Demographics",
+                options=["General", "OBC", "SC", "ST", "Women", "Minority"],
+                index=4,
+                help="Special reservations and higher subsidies exist for Women, SC, ST, OBC, and Minorities.",
+            )
+
+        submitted = st.form_submit_button("🔍 Find Matching Schemes", use_container_width=True)
+
+    if submitted:
+        # Build profile dictionary
+        profile = {
+            "age": age,
+            "annual_income": annual_income,
+            "sector": sector,
+            "business_stage": business_stage,
+            "location": location,
+            "social_category": social_category,
+            "funding_requirement": funding_requirement,
+            "purpose": purpose,
+        }
+
+        # 1. Predict Cluster Persona
+        feature_order = [
+            "age",
+            "annual_income",
+            "funding_requirement",
+            "sector",
+            "business_stage",
+            "location",
+            "social_category",
+            "purpose",
+        ]
+        input_df = pd.DataFrame([profile])[feature_order]
+        X_proc = preprocessor.transform(input_df)
+        cluster_id = int(kmeans.predict(X_proc)[0])
+        persona_name = CLUSTER_NAMES.get(cluster_id, f"Cluster {cluster_id}")
+        persona_desc = CLUSTER_DESCRIPTIONS.get(cluster_id, "")
+        badge = CLUSTER_BADGES.get(cluster_id, "📌")
+
+        st.markdown("---")
+        st.subheader("Your Matching Results")
+
+        # Cluster Persona Card
+        st.markdown(
+            f"""
+            <div class="cluster-card">
+                <div class="cluster-title">{badge} Assigned Persona: Cluster {cluster_id} — {persona_name}</div>
+                <div class="cluster-desc">{persona_desc}</div>
+                <div style="margin-top: 0.6rem;">
+                    <span class="metric-chip">Sector: {sector}</span>
+                    <span class="metric-chip">Stage: {business_stage}</span>
+                    <span class="metric-chip">Location: {location}</span>
+                    <span class="metric-chip">Category: {social_category}</span>
+                    <span class="metric-chip">Funding Need: ₹{funding_requirement:,.0f}</span>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+        # 2. Rule-Based Scheme Matching
+        matched_schemes = match_applicant(profile, schemes_df)
+
+        if matched_schemes:
+            st.success(
+                f"🎉 Found **{len(matched_schemes)}** potentially relevant government scheme(s) "
+                f"matching your profile."
+            )
+
+            for idx, scheme in enumerate(matched_schemes, start=1):
+                expander_title = (
+                    f"**#{idx}. {scheme['scheme_id']}: {scheme['scheme_name']}** "
+                    f"— *{scheme['support_type']}*"
+                )
+                with st.expander(expander_title, expanded=(idx == 1)):
+                    c_left, c_right = st.columns([3, 1])
+
+                    with c_left:
+                        st.markdown("#### ✅ Why You Matched:")
+                        for reason in scheme["matched_reasons"]:
+                            st.markdown(f"- {reason}")
+
+                        st.markdown("#### 🔍 Verification Needed Before Applying:")
+                        for item in scheme["verification_needed"]:
+                            st.markdown(f"- **{item.split(':')[0]}**: {':'.join(item.split(':')[1:]).strip()}" if ":" in item else f"- {item}")
+
+                    with c_right:
+                        st.markdown("**Support Mechanism:**")
+                        st.info(scheme["support_type"])
+
+                        st.markdown(f"**Data Verified:** `{scheme['last_verified']}`")
+
+                        st.link_button(
+                            "🌐 Open Official Portal",
+                            scheme["official_url"],
+                            use_container_width=True,
+                        )
+
+        else:
+            # Check for funding near-misses
+            near_misses = find_funding_near_misses(profile, schemes_df)
+
+            if near_misses:
+                st.warning(
+                    f"⚠️ **No exact scheme matches your requested funding of ₹{funding_requirement:,.0f}.**"
+                )
+                st.info("💡 **Schemes Available at Different Funding Amounts:**")
+                st.write(
+                    "Your profile meets all non-funding eligibility criteria (age, sector, business stage, location, and social category) "
+                    "for the following schemes, but requires a different funding amount:"
+                )
+
+                for nm in near_misses:
+                    with st.expander(
+                        f"🏛️ **{nm['scheme_id']}: {nm['scheme_name']}** — *{nm['support_type']}*",
+                        expanded=True,
+                    ):
+                        c1, c2 = st.columns([3, 1])
+                        with c1:
+                            st.markdown(
+                                f"- **Supported Funding Range:** ₹{nm['funding_min']:,.0f} – ₹{nm['effective_funding_max']:,.0f}"
+                            )
+                            st.markdown(f"- **Funding Analysis:** {nm['funding_gap_note']}")
+                            st.markdown(f"- **Support Type:** {nm['support_type']}")
+                        with c2:
+                            st.link_button(
+                                "🌐 Official Portal",
+                                nm["official_url"],
+                                use_container_width=True,
+                            )
+            else:
+                st.warning("⚠️ **No government schemes match your current profile.**")
+                st.markdown(
+                    """
+                    **Common reasons why no schemes qualified:**
+                    - **Minimum Age Requirement:** All verified government credit programs (PMEGP, PMFME, Mudra, Stand-Up India) legally require the applicant to be at least **18 years of age**.
+                    - **Business Stage Restriction:** Schemes offer disbursements exclusively for **New (greenfield)** or **Existing (operational)** ventures. Applications in the **Planning / Ideation** stage cannot receive loan or subsidy disbursements until formal registration begins.
+                    - **Sector & Scheme Limits:** Certain programs cater strictly to specific sectors (e.g., PMFME supports only Food Processing).
+                    - **Demographic Reservations:** Schemes like Stand-Up India require the applicant to be an **SC, ST, or Woman** entrepreneur.
+                    """
+                )
+
+
+# =============================================================================
+# TAB 2: Cluster & Scheme Overview
+# =============================================================================
+with tab2:
+    st.subheader("Population Distribution & Cluster-to-Scheme Mapping")
+    st.write(
+        "Analysis across **400 synthetic applicant profiles** demonstrating how "
+        "unsupervised beneficiary clustering aligns with government scheme eligibility."
+    )
+
+    # 1. Summary Table
+    summary_df = get_cluster_mapping_summary()
+
+    # Create display-friendly table
+    display_df = summary_df.copy()
+    display_df.rename(
+        columns={
+            "cluster_id": "Cluster",
+            "persona": "Persona Name",
+            "total_applicants": "Total Applicants",
+            "matched_any_count": "Matched ≥1 Scheme",
+            "matched_any_pct": "Match Rate (%)",
+            "SCH01_count": "PMEGP (Count)",
+            "SCH01_pct": "PMEGP (%)",
+            "SCH02_count": "PMFME (Count)",
+            "SCH02_pct": "PMFME (%)",
+            "SCH03_count": "Mudra (Count)",
+            "SCH03_pct": "Mudra (%)",
+            "SCH04_count": "Stand-Up (Count)",
+            "SCH04_pct": "Stand-Up (%)",
+        },
+        inplace=True,
+    )
+
+    # Format percentages for table display
+    for col in ["Match Rate (%)", "PMEGP (%)", "PMFME (%)", "Mudra (%)", "Stand-Up (%)"]:
+        if col in display_df.columns:
+            display_df[col] = display_df[col].map(lambda x: f"{x:.1f}%")
+
+    st.dataframe(display_df, use_container_width=True, hide_index=True)
+
+    st.markdown("---")
+    st.subheader("Visual Analytics & Model Diagnostics")
+
+    col_img1, col_img2 = st.columns(2)
+
+    pca_path = os.path.join("visualizations", "kmeans_clusters_pca.png")
+    elbow_path = os.path.join("visualizations", "kmeans_elbow_silhouette.png")
+
+    with col_img1:
+        st.markdown("#### 🗺️ 2D PCA Cluster Distribution")
+        if os.path.exists(pca_path):
+            st.image(
+                pca_path,
+                caption="K-Means Clusters projected onto PC1 & PC2 with cluster centroids marked.",
+                use_container_width=True,
+            )
+        else:
+            st.info("PCA visualization not found in `visualizations/kmeans_clusters_pca.png`.")
+
+    with col_img2:
+        st.markdown("#### 📈 Optimal K Evaluation (Elbow & Silhouette)")
+        if os.path.exists(elbow_path):
+            st.image(
+                elbow_path,
+                caption="Elbow Method (Inertia) & Silhouette Scores across K ∈ [2, 10].",
+                use_container_width=True,
+            )
+        else:
+            st.info("Elbow/Silhouette visualization not found in `visualizations/kmeans_elbow_silhouette.png`.")
+
+    st.markdown("---")
+    st.subheader("Verified Government Schemes in Database")
+    st.dataframe(
+        schemes_df[
+            [
+                "scheme_id",
+                "scheme_name",
+                "target_sector",
+                "business_stage",
+                "funding_min",
+                "funding_max",
+                "social_category",
+                "support_type",
+                "official_url",
+            ]
+        ],
+        use_container_width=True,
+        hide_index=True,
+    )

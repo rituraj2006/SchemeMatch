@@ -1,0 +1,401 @@
+applicant_id,age,annual_income,sector,business_stage,location,social_category,funding_requirement,purpose
+SYN_001,41,750000,Food Processing,Existing,Urban,ST,2890000,Machinery & Equipment
+SYN_002,28,750000,Food Processing,Existing,Urban,SC,100000,Raw Materials
+SYN_003,25,50000,Food Processing,New,Rural,Women,230000,Unit Setup
+SYN_004,32,250000,Manufacturing,Existing,Rural,General,1670000,Raw Materials
+SYN_005,29,95000,Agri-Allied,Existing,Rural,SC,190000,Unit Setup
+SYN_006,28,105000,Agri-Allied,Existing,Rural,SC,50000,Raw Materials
+SYN_007,38,210000,Manufacturing,New,Rural,Women,510000,Business Expansion
+SYN_008,28,125000,Agri-Allied,New,Rural,SC,180000,Unit Setup
+SYN_009,38,405000,Food Processing,Existing,Urban,OBC,2250000,Working Capital
+SYN_010,40,295000,Trading,Existing,Rural,General,540000,Business Expansion
+SYN_011,23,60000,Agri-Allied,New,Rural,General,290000,Raw Materials
+SYN_012,40,145000,Food Processing,New,Rural,Minority,280000,Raw Materials
+SYN_013,33,90000,Agri-Allied,New,Rural,SC,140000,Machinery & Equipment
+SYN_014,35,165000,Agri-Allied,New,Rural,OBC,140000,Unit Setup
+SYN_015,40,415000,Service,New,Rural,General,470000,Working Capital
+SYN_016,33,50000,Trading,New,Urban,Minority,220000,Unit Setup
+SYN_017,39,690000,Manufacturing,Existing,Urban,General,4600000,Working Capital
+SYN_018,17,100000,Agri-Allied,Planning,Rural,Minority,140000,Raw Materials
+SYN_019,46,650000,Food Processing,New,Urban,OBC,2130000,Machinery & Equipment
+SYN_020,40,100000,Manufacturing,Planning,Rural,SC,60000,Unit Setup
+SYN_021,21,135000,Trading,Existing,Rural,OBC,190000,Raw Materials
+SYN_022,24,105000,Agri-Allied,Existing,Rural,ST,180000,Raw Materials
+SYN_023,25,75000,Agri-Allied,Planning,Rural,ST,320000,Machinery & Equipment
+SYN_024,35,705000,Agri-Allied,New,Urban,OBC,2730000,Business Expansion
+SYN_025,26,115000,Trading,New,Rural,OBC,330000,Unit Setup
+SYN_026,34,225000,Manufacturing,Planning,Rural,Women,540000,Unit Setup
+SYN_027,33,215000,Manufacturing,New,Rural,Women,670000,Working Capital
+SYN_028,50,320000,Manufacturing,Existing,Rural,General,240000,Business Expansion
+SYN_029,37,450000,Agri-Allied,Existing,Urban,General,1760000,Machinery & Equipment
+SYN_030,21,520000,Service,New,Urban,General,490000,Machinery & Equipment
+SYN_031,22,145000,Agri-Allied,Planning,Urban,Minority,330000,Machinery & Equipment
+SYN_032,36,285000,Trading,Existing,Urban,OBC,610000,Working Capital
+SYN_033,35,555000,Manufacturing,Existing,Urban,General,100000,Business Expansion
+SYN_034,25,50000,Trading,New,Rural,Minority,230000,Machinery & Equipment
+SYN_035,45,350000,Manufacturing,Existing,Urban,Minority,100000,Machinery & Equipment
+SYN_036,33,220000,Manufacturing,Existing,Urban,General,490000,Machinery & Equipment
+SYN_037,37,175000,Service,New,Urban,ST,730000,Business Expansion
+SYN_038,27,210000,Service,New,Rural,Women,120000,Business Expansion
+SYN_039,24,465000,Trading,Existing,Rural,OBC,520000,Working Capital
+SYN_040,34,355000,Service,New,Urban,ST,450000,Working Capital
+SYN_041,27,135000,Trading,Planning,Rural,ST,230000,Machinery & Equipment
+SYN_042,28,170000,Trading,New,Rural,Minority,350000,Machinery & Equipment
+SYN_043,22,100000,Agri-Allied,New,Rural,Women,200000,Unit Setup
+SYN_044,21,135000,Food Processing,New,Rural,OBC,280000,Unit Setup
+SYN_045,26,95000,Trading,New,Rural,General,290000,Unit Setup
+SYN_046,38,250000,Service,Planning,Urban,SC,290000,Unit Setup
+SYN_047,28,405000,Service,Existing,Urban,Women,510000,Business Expansion
+SYN_048,47,390000,Service,Existing,Urban,Women,350000,Machinery & Equipment
+SYN_049,26,150000,Agri-Allied,New,Rural,Women,220000,Raw Materials
+SYN_050,33,330000,Service,Existing,Urban,General,610000,Working Capital
+SYN_051,28,155000,Agri-Allied,Existing,Rural,Women,250000,Unit Setup
+SYN_052,34,240000,Food Processing,New,Rural,Minority,460000,Unit Setup
+SYN_053,27,195000,Trading,New,Urban,ST,120000,Business Expansion
+SYN_054,24,110000,Trading,New,Rural,OBC,180000,Raw Materials
+SYN_055,16,100000,Service,Planning,Rural,SC,120000,Unit Setup
+SYN_056,28,120000,Food Processing,New,Rural,SC,130000,Raw Materials
+SYN_057,28,695000,Food Processing,New,Rural,SC,100000,Business Expansion
+SYN_058,35,435000,Manufacturing,Existing,Urban,General,650000,Working Capital
+SYN_059,25,75000,Trading,New,Rural,General,90000,Machinery & Equipment
+SYN_060,32,360000,Service,New,Urban,General,450000,Machinery & Equipment
+SYN_061,31,415000,Trading,Existing,Rural,General,530000,Business Expansion
+SYN_062,34,100000,Agri-Allied,New,Rural,Minority,30000,Unit Setup
+SYN_063,32,685000,Food Processing,New,Urban,General,3350000,Machinery & Equipment
+SYN_064,25,150000,Food Processing,New,Rural,OBC,140000,Raw Materials
+SYN_065,34,315000,Service,New,Rural,Minority,450000,Working Capital
+SYN_066,21,130000,Trading,New,Rural,Women,220000,Raw Materials
+SYN_067,29,185000,Food Processing,Existing,Urban,Women,280000,Business Expansion
+SYN_068,35,670000,Agri-Allied,Existing,Urban,General,1950000,Machinery & Equipment
+SYN_069,25,280000,Service,Planning,Urban,Women,480000,Working Capital
+SYN_070,19,80000,Agri-Allied,New,Urban,ST,150000,Raw Materials
+SYN_071,40,230000,Service,New,Rural,Women,160000,Working Capital
+SYN_072,43,245000,Service,Existing,Rural,OBC,450000,Working Capital
+SYN_073,20,230000,Agri-Allied,Existing,Rural,Minority,300000,Machinery & Equipment
+SYN_074,27,50000,Trading,New,Urban,Women,100000,Unit Setup
+SYN_075,35,240000,Food Processing,Planning,Urban,OBC,230000,Machinery & Equipment
+SYN_076,45,710000,Manufacturing,Existing,Urban,OBC,4420000,Working Capital
+SYN_077,36,380000,Manufacturing,Existing,Urban,OBC,1920000,Working Capital
+SYN_078,17,100000,Food Processing,Planning,Urban,General,200000,Unit Setup
+SYN_079,31,405000,Manufacturing,Existing,Urban,Women,520000,Machinery & Equipment
+SYN_080,36,155000,Food Processing,Existing,Urban,SC,480000,Machinery & Equipment
+SYN_081,19,125000,Agri-Allied,New,Urban,Minority,160000,Machinery & Equipment
+SYN_082,29,150000,Agri-Allied,New,Rural,ST,250000,Unit Setup
+SYN_083,38,940000,Manufacturing,Existing,Urban,Women,1000000,Working Capital
+SYN_084,43,635000,Agri-Allied,Existing,Rural,SC,2610000,Working Capital
+SYN_085,28,440000,Food Processing,Existing,Urban,General,1960000,Working Capital
+SYN_086,25,160000,Food Processing,New,Rural,Women,210000,Raw Materials
+SYN_087,31,840000,Food Processing,Existing,Urban,ST,2880000,Machinery & Equipment
+SYN_088,38,115000,Food Processing,Existing,Urban,Women,510000,Working Capital
+SYN_089,33,450000,Trading,New,Urban,SC,130000,Business Expansion
+SYN_090,18,180000,Food Processing,Existing,Rural,ST,400000,Unit Setup
+SYN_091,48,515000,Manufacturing,New,Rural,OBC,1190000,Machinery & Equipment
+SYN_092,50,285000,Service,Existing,Urban,SC,500000,Raw Materials
+SYN_093,33,300000,Service,New,Urban,General,790000,Working Capital
+SYN_094,36,1110000,Food Processing,Existing,Rural,SC,5090000,Working Capital
+SYN_095,32,335000,Trading,Existing,Urban,OBC,480000,Machinery & Equipment
+SYN_096,24,100000,Agri-Allied,New,Rural,ST,300000,Machinery & Equipment
+SYN_097,17,75000,Food Processing,Planning,Rural,Women,110000,Unit Setup
+SYN_098,23,195000,Manufacturing,Planning,Rural,Women,160000,Working Capital
+SYN_099,48,250000,Food Processing,Existing,Rural,Women,2300000,Business Expansion
+SYN_100,24,175000,Food Processing,New,Urban,ST,100000,Unit Setup
+SYN_101,37,295000,Agri-Allied,Existing,Rural,SC,3870000,Machinery & Equipment
+SYN_102,26,455000,Trading,Existing,Urban,SC,330000,Working Capital
+SYN_103,26,115000,Trading,New,Rural,SC,200000,Unit Setup
+SYN_104,18,120000,Food Processing,Existing,Rural,SC,100000,Unit Setup
+SYN_105,21,445000,Service,Existing,Urban,ST,670000,Working Capital
+SYN_106,22,65000,Food Processing,New,Rural,OBC,130000,Machinery & Equipment
+SYN_107,33,100000,Agri-Allied,New,Rural,General,270000,Unit Setup
+SYN_108,22,385000,Service,Existing,Urban,OBC,390000,Machinery & Equipment
+SYN_109,24,335000,Service,Existing,Rural,ST,300000,Business Expansion
+SYN_110,21,75000,Manufacturing,New,Urban,ST,490000,Machinery & Equipment
+SYN_111,29,445000,Manufacturing,New,Rural,Women,580000,Business Expansion
+SYN_112,36,110000,Service,Planning,Rural,Women,360000,Machinery & Equipment
+SYN_113,19,215000,Food Processing,New,Urban,SC,110000,Working Capital
+SYN_114,34,200000,Agri-Allied,Planning,Rural,Minority,150000,Unit Setup
+SYN_115,27,150000,Manufacturing,Existing,Rural,SC,350000,Machinery & Equipment
+SYN_116,18,95000,Agri-Allied,Existing,Rural,Minority,200000,Machinery & Equipment
+SYN_117,18,100000,Food Processing,New,Rural,OBC,180000,Raw Materials
+SYN_118,35,650000,Manufacturing,Existing,Rural,Minority,100000,Business Expansion
+SYN_119,37,325000,Food Processing,Existing,Rural,Women,240000,Machinery & Equipment
+SYN_120,37,660000,Food Processing,Existing,Urban,OBC,3350000,Machinery & Equipment
+SYN_121,39,335000,Trading,Existing,Urban,General,710000,Working Capital
+SYN_122,24,315000,Trading,Existing,Urban,General,540000,Working Capital
+SYN_123,34,140000,Agri-Allied,New,Rural,Minority,180000,Unit Setup
+SYN_124,25,60000,Manufacturing,Existing,Urban,Minority,330000,Machinery & Equipment
+SYN_125,32,140000,Food Processing,New,Rural,OBC,290000,Raw Materials
+SYN_126,30,255000,Trading,New,Urban,OBC,610000,Working Capital
+SYN_127,29,175000,Agri-Allied,New,Urban,Women,110000,Unit Setup
+SYN_128,35,180000,Trading,Existing,Urban,Women,610000,Machinery & Equipment
+SYN_129,27,450000,Trading,Existing,Urban,SC,450000,Business Expansion
+SYN_130,47,565000,Manufacturing,Existing,Rural,OBC,3960000,Machinery & Equipment
+SYN_131,40,170000,Food Processing,New,Rural,SC,320000,Unit Setup
+SYN_132,21,450000,Manufacturing,New,Urban,OBC,280000,Working Capital
+SYN_133,39,790000,Food Processing,Existing,Rural,Women,2110000,Machinery & Equipment
+SYN_134,35,320000,Service,New,Urban,Minority,580000,Machinery & Equipment
+SYN_135,33,435000,Trading,Existing,Urban,SC,560000,Working Capital
+SYN_136,32,405000,Manufacturing,Existing,Urban,OBC,310000,Business Expansion
+SYN_137,38,670000,Manufacturing,Existing,Rural,OBC,1670000,Working Capital
+SYN_138,46,630000,Food Processing,Existing,Urban,OBC,1080000,Business Expansion
+SYN_139,39,685000,Manufacturing,Existing,Urban,ST,4590000,Raw Materials
+SYN_140,23,260000,Service,New,Rural,ST,30000,Unit Setup
+SYN_141,21,115000,Agri-Allied,Existing,Rural,General,100000,Unit Setup
+SYN_142,28,460000,Service,New,Urban,OBC,760000,Machinery & Equipment
+SYN_143,23,70000,Food Processing,New,Rural,SC,110000,Raw Materials
+SYN_144,37,430000,Service,New,Urban,Women,540000,Working Capital
+SYN_145,32,315000,Manufacturing,Existing,Urban,General,380000,Business Expansion
+SYN_146,42,595000,Manufacturing,New,Rural,OBC,640000,Working Capital
+SYN_147,23,130000,Agri-Allied,Existing,Rural,Women,110000,Raw Materials
+SYN_148,36,410000,Service,Existing,Urban,General,200000,Machinery & Equipment
+SYN_149,33,345000,Trading,New,Urban,General,900000,Machinery & Equipment
+SYN_150,38,285000,Trading,New,Urban,ST,280000,Working Capital
+SYN_151,27,125000,Agri-Allied,New,Rural,SC,80000,Machinery & Equipment
+SYN_152,36,345000,Food Processing,Existing,Urban,ST,410000,Machinery & Equipment
+SYN_153,41,590000,Manufacturing,Existing,Rural,OBC,280000,Machinery & Equipment
+SYN_154,39,370000,Service,New,Urban,Women,370000,Machinery & Equipment
+SYN_155,24,160000,Agri-Allied,New,Rural,ST,200000,Raw Materials
+SYN_156,32,350000,Trading,New,Urban,SC,490000,Business Expansion
+SYN_157,24,225000,Service,Existing,Urban,Women,340000,Business Expansion
+SYN_158,22,165000,Food Processing,New,Rural,SC,260000,Machinery & Equipment
+SYN_159,28,170000,Trading,New,Urban,Women,140000,Machinery & Equipment
+SYN_160,26,175000,Trading,Planning,Urban,Women,320000,Machinery & Equipment
+SYN_161,16,110000,Trading,Planning,Urban,General,150000,Raw Materials
+SYN_162,43,1035000,Manufacturing,New,Rural,General,2090000,Business Expansion
+SYN_163,43,730000,Food Processing,New,Urban,General,1710000,Working Capital
+SYN_164,39,225000,Manufacturing,New,Urban,OBC,470000,Business Expansion
+SYN_165,19,200000,Service,New,Rural,SC,340000,Machinery & Equipment
+SYN_166,26,160000,Food Processing,New,Rural,OBC,280000,Unit Setup
+SYN_167,16,50000,Food Processing,Planning,Rural,Minority,90000,Unit Setup
+SYN_168,34,150000,Trading,Existing,Urban,General,1090000,Business Expansion
+SYN_169,21,325000,Service,Existing,Urban,OBC,480000,Business Expansion
+SYN_170,35,695000,Food Processing,Existing,Rural,SC,1850000,Machinery & Equipment
+SYN_171,31,100000,Trading,Existing,Rural,OBC,200000,Raw Materials
+SYN_172,20,115000,Trading,New,Rural,Women,200000,Machinery & Equipment
+SYN_173,33,245000,Manufacturing,New,Urban,OBC,640000,Machinery & Equipment
+SYN_174,23,75000,Agri-Allied,Existing,Rural,ST,200000,Unit Setup
+SYN_175,36,245000,Service,New,Urban,General,490000,Business Expansion
+SYN_176,41,210000,Manufacturing,New,Urban,ST,320000,Business Expansion
+SYN_177,24,115000,Agri-Allied,New,Rural,ST,210000,Unit Setup
+SYN_178,46,585000,Food Processing,Existing,Urban,SC,1360000,Working Capital
+SYN_179,22,90000,Agri-Allied,New,Rural,SC,160000,Raw Materials
+SYN_180,26,130000,Agri-Allied,New,Rural,OBC,270000,Unit Setup
+SYN_181,23,135000,Trading,New,Rural,Minority,70000,Raw Materials
+SYN_182,32,280000,Service,New,Urban,OBC,410000,Business Expansion
+SYN_183,29,320000,Service,Existing,Urban,General,490000,Working Capital
+SYN_184,35,515000,Service,Existing,Urban,SC,380000,Working Capital
+SYN_185,27,75000,Agri-Allied,Existing,Rural,General,240000,Unit Setup
+SYN_186,21,445000,Service,New,Urban,General,270000,Machinery & Equipment
+SYN_187,19,270000,Service,New,Rural,ST,350000,Working Capital
+SYN_188,37,260000,Manufacturing,Existing,Urban,SC,4190000,Business Expansion
+SYN_189,28,235000,Food Processing,Existing,Rural,ST,410000,Raw Materials
+SYN_190,31,405000,Trading,Existing,Urban,Minority,240000,Business Expansion
+SYN_191,34,195000,Service,Existing,Urban,Minority,510000,Working Capital
+SYN_192,31,235000,Trading,New,Urban,General,540000,Working Capital
+SYN_193,16,125000,Agri-Allied,Planning,Urban,Women,170000,Raw Materials
+SYN_194,19,165000,Agri-Allied,Existing,Rural,ST,210000,Unit Setup
+SYN_195,35,150000,Food Processing,New,Rural,ST,420000,Business Expansion
+SYN_196,33,160000,Service,New,Rural,ST,280000,Working Capital
+SYN_197,35,250000,Service,New,Rural,SC,360000,Business Expansion
+SYN_198,32,180000,Trading,New,Rural,Women,210000,Machinery & Equipment
+SYN_199,34,80000,Manufacturing,Existing,Urban,Women,650000,Working Capital
+SYN_200,30,250000,Service,New,Rural,Women,270000,Business Expansion
+SYN_201,25,290000,Trading,Existing,Rural,General,460000,Business Expansion
+SYN_202,47,280000,Agri-Allied,Existing,Rural,OBC,1390000,Business Expansion
+SYN_203,40,530000,Food Processing,Existing,Rural,ST,2420000,Machinery & Equipment
+SYN_204,38,330000,Agri-Allied,New,Rural,ST,3370000,Machinery & Equipment
+SYN_205,58,300000,Manufacturing,New,Rural,Women,3630000,Machinery & Equipment
+SYN_206,27,265000,Service,New,Urban,SC,500000,Business Expansion
+SYN_207,33,160000,Food Processing,New,Rural,Women,240000,Raw Materials
+SYN_208,31,105000,Agri-Allied,New,Rural,SC,200000,Raw Materials
+SYN_209,23,215000,Manufacturing,Existing,Urban,Women,320000,Unit Setup
+SYN_210,34,360000,Manufacturing,Existing,Urban,General,360000,Business Expansion
+SYN_211,44,790000,Food Processing,Existing,Urban,General,920000,Machinery & Equipment
+SYN_212,31,525000,Trading,Existing,Urban,Minority,630000,Working Capital
+SYN_213,33,570000,Service,New,Rural,General,250000,Working Capital
+SYN_214,36,170000,Food Processing,New,Rural,Women,30000,Raw Materials
+SYN_215,36,185000,Agri-Allied,New,Urban,Women,490000,Unit Setup
+SYN_216,36,305000,Manufacturing,Existing,Urban,General,680000,Working Capital
+SYN_217,17,70000,Service,Planning,Urban,Minority,70000,Raw Materials
+SYN_218,37,580000,Agri-Allied,Existing,Rural,Minority,2340000,Machinery & Equipment
+SYN_219,37,375000,Manufacturing,Planning,Urban,General,150000,Unit Setup
+SYN_220,47,575000,Food Processing,Existing,Rural,General,3510000,Business Expansion
+SYN_221,33,275000,Food Processing,New,Rural,Women,790000,Working Capital
+SYN_222,35,245000,Manufacturing,Existing,Urban,OBC,460000,Business Expansion
+SYN_223,38,780000,Manufacturing,New,Urban,Women,1210000,Business Expansion
+SYN_224,29,370000,Service,New,Urban,OBC,740000,Working Capital
+SYN_225,33,455000,Service,New,Urban,SC,470000,Working Capital
+SYN_226,21,440000,Service,Existing,Urban,General,650000,Working Capital
+SYN_227,30,350000,Manufacturing,New,Urban,General,350000,Business Expansion
+SYN_228,33,235000,Food Processing,Planning,Urban,General,50000,Unit Setup
+SYN_229,20,135000,Agri-Allied,New,Rural,Women,210000,Raw Materials
+SYN_230,45,660000,Food Processing,Existing,Urban,OBC,2690000,Business Expansion
+SYN_231,34,195000,Manufacturing,New,Urban,Women,490000,Machinery & Equipment
+SYN_232,43,740000,Manufacturing,Existing,Urban,General,390000,Machinery & Equipment
+SYN_233,33,310000,Agri-Allied,New,Rural,General,2140000,Business Expansion
+SYN_234,24,135000,Trading,New,Rural,ST,180000,Unit Setup
+SYN_235,32,455000,Manufacturing,New,Rural,OBC,400000,Business Expansion
+SYN_236,36,185000,Agri-Allied,New,Urban,Women,260000,Working Capital
+SYN_237,48,715000,Manufacturing,Existing,Rural,OBC,4830000,Machinery & Equipment
+SYN_238,30,60000,Food Processing,New,Urban,Women,280000,Unit Setup
+SYN_239,16,75000,Service,Planning,Rural,Women,160000,Raw Materials
+SYN_240,33,225000,Food Processing,New,Urban,Minority,320000,Unit Setup
+SYN_241,17,60000,Trading,Planning,Rural,General,70000,Raw Materials
+SYN_242,22,265000,Manufacturing,Existing,Urban,SC,530000,Machinery & Equipment
+SYN_243,24,180000,Agri-Allied,New,Rural,General,120000,Unit Setup
+SYN_244,27,150000,Manufacturing,Existing,Urban,Women,250000,Working Capital
+SYN_245,18,85000,Food Processing,Existing,Rural,ST,160000,Unit Setup
+SYN_246,26,95000,Agri-Allied,New,Rural,General,250000,Raw Materials
+SYN_247,19,260000,Food Processing,Planning,Rural,SC,320000,Working Capital
+SYN_248,26,550000,Manufacturing,Existing,Urban,General,640000,Machinery & Equipment
+SYN_249,36,875000,Food Processing,Existing,Urban,General,3520000,Machinery & Equipment
+SYN_250,37,420000,Food Processing,Existing,Rural,Minority,250000,Unit Setup
+SYN_251,32,280000,Manufacturing,New,Urban,General,600000,Working Capital
+SYN_252,41,530000,Manufacturing,New,Rural,OBC,490000,Business Expansion
+SYN_253,33,435000,Trading,Existing,Urban,Women,830000,Business Expansion
+SYN_254,35,260000,Service,Existing,Urban,Minority,350000,Machinery & Equipment
+SYN_255,28,130000,Trading,Existing,Rural,OBC,260000,Machinery & Equipment
+SYN_256,36,180000,Manufacturing,New,Rural,Minority,410000,Unit Setup
+SYN_257,18,130000,Trading,New,Rural,Women,30000,Machinery & Equipment
+SYN_258,23,55000,Trading,New,Rural,Minority,200000,Raw Materials
+SYN_259,40,880000,Agri-Allied,Existing,Rural,SC,410000,Raw Materials
+SYN_260,31,260000,Trading,Existing,Urban,Minority,280000,Machinery & Equipment
+SYN_261,24,325000,Service,New,Urban,General,750000,Working Capital
+SYN_262,24,135000,Food Processing,Existing,Rural,OBC,140000,Machinery & Equipment
+SYN_263,22,175000,Trading,New,Rural,Women,270000,Unit Setup
+SYN_264,24,150000,Agri-Allied,Existing,Rural,Minority,130000,Machinery & Equipment
+SYN_265,41,450000,Trading,Existing,Urban,SC,50000,Working Capital
+SYN_266,34,395000,Trading,New,Urban,Women,540000,Machinery & Equipment
+SYN_267,19,235000,Service,New,Rural,Minority,410000,Business Expansion
+SYN_268,49,270000,Food Processing,Existing,Urban,General,340000,Raw Materials
+SYN_269,48,475000,Agri-Allied,Existing,Urban,General,3240000,Machinery & Equipment
+SYN_270,18,120000,Food Processing,Existing,Rural,ST,90000,Raw Materials
+SYN_271,25,165000,Trading,Existing,Rural,SC,160000,Unit Setup
+SYN_272,40,770000,Manufacturing,Existing,Rural,OBC,1500000,Machinery & Equipment
+SYN_273,35,130000,Manufacturing,New,Rural,Women,280000,Business Expansion
+SYN_274,34,115000,Service,New,Rural,Minority,220000,Unit Setup
+SYN_275,24,280000,Trading,Existing,Rural,OBC,370000,Business Expansion
+SYN_276,26,110000,Food Processing,Existing,Rural,SC,200000,Raw Materials
+SYN_277,31,205000,Trading,New,Urban,SC,320000,Working Capital
+SYN_278,30,405000,Manufacturing,Existing,Rural,General,3780000,Machinery & Equipment
+SYN_279,38,530000,Manufacturing,Existing,Urban,SC,420000,Working Capital
+SYN_280,21,180000,Manufacturing,New,Urban,SC,520000,Machinery & Equipment
+SYN_281,22,110000,Food Processing,New,Rural,SC,270000,Unit Setup
+SYN_282,40,830000,Manufacturing,New,Rural,General,3460000,Raw Materials
+SYN_283,32,260000,Trading,New,Urban,Women,260000,Working Capital
+SYN_284,37,475000,Service,Existing,Urban,Women,400000,Business Expansion
+SYN_285,42,570000,Manufacturing,Existing,Rural,Women,2770000,Business Expansion
+SYN_286,23,230000,Trading,New,Urban,Minority,470000,Business Expansion
+SYN_287,30,580000,Food Processing,New,Urban,OBC,1870000,Working Capital
+SYN_288,45,235000,Service,Existing,Urban,Women,190000,Machinery & Equipment
+SYN_289,23,180000,Food Processing,New,Rural,ST,170000,Machinery & Equipment
+SYN_290,42,475000,Manufacturing,Existing,Urban,Women,2720000,Raw Materials
+SYN_291,25,105000,Agri-Allied,Existing,Rural,OBC,70000,Raw Materials
+SYN_292,23,110000,Trading,Existing,Rural,ST,150000,Unit Setup
+SYN_293,28,145000,Trading,New,Rural,OBC,160000,Raw Materials
+SYN_294,43,835000,Manufacturing,Existing,Rural,SC,100000,Raw Materials
+SYN_295,36,680000,Food Processing,Existing,Urban,General,1980000,Machinery & Equipment
+SYN_296,33,240000,Agri-Allied,New,Rural,Minority,480000,Unit Setup
+SYN_297,35,80000,Agri-Allied,New,Rural,Minority,280000,Machinery & Equipment
+SYN_298,30,220000,Agri-Allied,New,Rural,Women,290000,Unit Setup
+SYN_299,39,450000,Manufacturing,Existing,Rural,General,100000,Machinery & Equipment
+SYN_300,35,640000,Manufacturing,Existing,Urban,General,1360000,Raw Materials
+SYN_301,37,275000,Service,New,Rural,Women,260000,Working Capital
+SYN_302,32,150000,Service,Existing,Rural,ST,680000,Business Expansion
+SYN_303,16,100000,Food Processing,Planning,Rural,OBC,150000,Raw Materials
+SYN_304,28,540000,Service,New,Urban,OBC,590000,Business Expansion
+SYN_305,18,170000,Agri-Allied,New,Rural,Women,290000,Raw Materials
+SYN_306,33,405000,Service,New,Rural,General,510000,Machinery & Equipment
+SYN_307,33,385000,Trading,Existing,Urban,OBC,220000,Business Expansion
+SYN_308,22,145000,Agri-Allied,Existing,Rural,General,130000,Machinery & Equipment
+SYN_309,21,145000,Agri-Allied,New,Rural,ST,110000,Machinery & Equipment
+SYN_310,19,190000,Service,Existing,Rural,Women,490000,Raw Materials
+SYN_311,22,105000,Agri-Allied,New,Rural,Women,200000,Unit Setup
+SYN_312,34,375000,Service,Existing,Rural,General,490000,Working Capital
+SYN_313,23,125000,Agri-Allied,New,Rural,Women,120000,Unit Setup
+SYN_314,33,125000,Food Processing,Existing,Rural,Women,500000,Unit Setup
+SYN_315,39,220000,Agri-Allied,New,Rural,SC,370000,Working Capital
+SYN_316,38,430000,Agri-Allied,Existing,Rural,Women,210000,Business Expansion
+SYN_317,55,555000,Manufacturing,Existing,Urban,General,3840000,Machinery & Equipment
+SYN_318,28,125000,Trading,Existing,Rural,Women,130000,Working Capital
+SYN_319,38,875000,Manufacturing,Existing,Urban,General,1280000,Working Capital
+SYN_320,45,720000,Manufacturing,Existing,Urban,SC,3970000,Working Capital
+SYN_321,38,920000,Agri-Allied,Existing,Rural,SC,2270000,Raw Materials
+SYN_322,31,150000,Service,New,Urban,SC,380000,Business Expansion
+SYN_323,30,60000,Agri-Allied,Existing,Rural,Women,380000,Machinery & Equipment
+SYN_324,38,405000,Manufacturing,Existing,Rural,OBC,2230000,Business Expansion
+SYN_325,21,230000,Agri-Allied,Planning,Urban,ST,40000,Machinery & Equipment
+SYN_326,50,235000,Trading,Existing,Urban,Women,480000,Unit Setup
+SYN_327,28,300000,Trading,New,Urban,Minority,300000,Raw Materials
+SYN_328,38,1135000,Manufacturing,Existing,Rural,OBC,1270000,Working Capital
+SYN_329,44,250000,Agri-Allied,Existing,Urban,General,5090000,Machinery & Equipment
+SYN_330,30,355000,Manufacturing,Existing,Urban,OBC,360000,Machinery & Equipment
+SYN_331,22,155000,Agri-Allied,Existing,Rural,OBC,160000,Raw Materials
+SYN_332,43,655000,Manufacturing,Existing,Urban,Women,4180000,Machinery & Equipment
+SYN_333,31,435000,Manufacturing,New,Urban,SC,520000,Working Capital
+SYN_334,34,280000,Service,New,Rural,Women,240000,Working Capital
+SYN_335,28,550000,Food Processing,New,Rural,Women,100000,Business Expansion
+SYN_336,38,315000,Service,Existing,Urban,Women,770000,Working Capital
+SYN_337,23,170000,Food Processing,Existing,Rural,OBC,260000,Machinery & Equipment
+SYN_338,28,95000,Agri-Allied,New,Rural,SC,160000,Unit Setup
+SYN_339,21,50000,Trading,New,Rural,OBC,340000,Machinery & Equipment
+SYN_340,22,120000,Agri-Allied,New,Rural,Minority,280000,Unit Setup
+SYN_341,35,555000,Manufacturing,Existing,Urban,General,2140000,Machinery & Equipment
+SYN_342,25,75000,Trading,New,Rural,OBC,200000,Raw Materials
+SYN_343,44,425000,Manufacturing,Existing,Rural,OBC,2400000,Working Capital
+SYN_344,25,190000,Trading,New,Rural,ST,250000,Raw Materials
+SYN_345,27,215000,Agri-Allied,New,Urban,SC,550000,Raw Materials
+SYN_346,26,180000,Food Processing,Existing,Rural,SC,200000,Unit Setup
+SYN_347,20,175000,Manufacturing,New,Urban,Women,270000,Unit Setup
+SYN_348,35,295000,Manufacturing,Existing,Rural,Women,100000,Working Capital
+SYN_349,37,660000,Manufacturing,Existing,Rural,General,3140000,Raw Materials
+SYN_350,22,140000,Trading,Existing,Rural,Women,290000,Raw Materials
+SYN_351,31,115000,Agri-Allied,New,Rural,Minority,330000,Unit Setup
+SYN_352,29,100000,Agri-Allied,Existing,Rural,SC,160000,Unit Setup
+SYN_353,38,405000,Manufacturing,Existing,Rural,OBC,1350000,Machinery & Equipment
+SYN_354,38,470000,Service,New,Urban,Women,560000,Machinery & Equipment
+SYN_355,19,215000,Trading,Existing,Rural,Minority,450000,Machinery & Equipment
+SYN_356,25,155000,Agri-Allied,Planning,Urban,Minority,310000,Working Capital
+SYN_357,33,355000,Trading,Existing,Urban,OBC,440000,Machinery & Equipment
+SYN_358,30,120000,Manufacturing,Existing,Rural,Women,320000,Unit Setup
+SYN_359,30,200000,Food Processing,Planning,Urban,General,430000,Working Capital
+SYN_360,30,195000,Trading,New,Urban,Minority,160000,Machinery & Equipment
+SYN_361,42,360000,Manufacturing,Existing,Urban,Women,1620000,Raw Materials
+SYN_362,25,120000,Agri-Allied,New,Urban,ST,320000,Raw Materials
+SYN_363,21,130000,Agri-Allied,New,Rural,Women,160000,Unit Setup
+SYN_364,33,490000,Service,New,Urban,General,300000,Working Capital
+SYN_365,24,360000,Service,Existing,Urban,Women,640000,Business Expansion
+SYN_366,18,190000,Service,Planning,Rural,Women,240000,Machinery & Equipment
+SYN_367,30,355000,Manufacturing,Existing,Urban,General,660000,Machinery & Equipment
+SYN_368,32,220000,Trading,Existing,Urban,General,170000,Working Capital
+SYN_369,19,195000,Trading,Existing,Rural,OBC,290000,Machinery & Equipment
+SYN_370,20,70000,Food Processing,Existing,Rural,Women,200000,Unit Setup
+SYN_371,28,155000,Agri-Allied,New,Urban,Minority,300000,Business Expansion
+SYN_372,28,510000,Manufacturing,Existing,Urban,General,5020000,Business Expansion
+SYN_373,36,580000,Food Processing,New,Urban,ST,2770000,Working Capital
+SYN_374,23,105000,Food Processing,Existing,Rural,ST,240000,Unit Setup
+SYN_375,27,230000,Food Processing,Existing,Urban,Women,560000,Unit Setup
+SYN_376,30,560000,Manufacturing,New,Urban,SC,450000,Working Capital
+SYN_377,39,525000,Manufacturing,Existing,Rural,OBC,2840000,Machinery & Equipment
+SYN_378,31,405000,Service,Existing,Urban,General,620000,Business Expansion
+SYN_379,24,270000,Agri-Allied,New,Urban,Women,260000,Unit Setup
+SYN_380,37,145000,Trading,New,Rural,Minority,330000,Working Capital
+SYN_381,43,730000,Manufacturing,Existing,Urban,Women,6030000,Business Expansion
+SYN_382,21,290000,Trading,Existing,Urban,ST,450000,Machinery & Equipment
+SYN_383,28,390000,Manufacturing,Existing,Rural,General,640000,Machinery & Equipment
+SYN_384,47,295000,Manufacturing,Existing,Urban,OBC,620000,Machinery & Equipment
+SYN_385,29,245000,Trading,New,Urban,OBC,390000,Business Expansion
+SYN_386,42,245000,Food Processing,Existing,Rural,Women,380000,Machinery & Equipment
+SYN_387,23,115000,Agri-Allied,New,Rural,OBC,240000,Unit Setup
+SYN_388,16,95000,Manufacturing,Planning,Rural,Women,100000,Unit Setup
+SYN_389,25,75000,Trading,New,Rural,Women,130000,Machinery & Equipment
+SYN_390,25,205000,Agri-Allied,New,Rural,Women,450000,Business Expansion
+SYN_391,42,940000,Food Processing,Existing,Urban,SC,3130000,Business Expansion
+SYN_392,40,440000,Manufacturing,New,Urban,OBC,560000,Business Expansion
+SYN_393,38,205000,Service,Planning,Rural,Women,380000,Unit Setup
+SYN_394,18,125000,Food Processing,New,Rural,SC,140000,Machinery & Equipment
+SYN_395,32,335000,Trading,New,Urban,General,340000,Working Capital
+SYN_396,18,95000,Trading,New,Rural,General,20000,Machinery & Equipment
+SYN_397,33,330000,Manufacturing,Existing,Urban,General,540000,Working Capital
+SYN_398,46,685000,Food Processing,Existing,Rural,General,3500000,Business Expansion
+SYN_399,26,180000,Service,New,Urban,Women,470000,Business Expansion
+SYN_400,25,410000,Service,New,Urban,General,570000,Business Expansion

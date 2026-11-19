@@ -1,0 +1,105 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.manifest
+*.spec
+
+# ========================
+# Virtual Environments
+# ========================
+venv/
+.venv/
+env/
+ENV/
+
+# ========================
+# Environment Variables & Secrets
+# ========================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*-credentials.json
+*-service-account.json
+service_account*.json
+credentials.json
+secrets.json
+config.secret.*
+
+# ========================
+# API Keys & Tokens
+# ========================
+api_keys.txt
+api_keys.json
+tokens.json
+
+# ========================
+# Jupyter Notebook Checkpoints
+# ========================
+.ipynb_checkpoints/
+
+# ========================
+# IDE & Editor Files
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ========================
+# Logs & Temporary Files
+# ========================
+*.log
+logs/
+tmp/
+temp/
+
+# ========================
+# Generated Model Files & Large Artifacts
+# ========================
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.joblib
+*.model
+*.onnx
+*.pt
+*.pth
+*.safetensors
+
+# ========================
+# Private / Raw Datasets & Personal Data
+# ========================
+data/raw/
+data/private/
+data/personal/
+data/*_private.*
+data/*_raw.*
+data/*_personal.*
+
+# ========================
+# OS-Generated Files
+# ========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
